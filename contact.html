@@ -1,5 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact – Jordan Markland</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f6f7fb;--card:#fff;--ink:#111827;--muted:#4b5563;--accent:#2563eb;--ring:rgba(37,99,235,.25);--shadow:0 10px 20px rgba(0,0,0,.06),0 3px 6px rgba(0,0,0,.05);--radius:18px;--container:1100px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    header{position:sticky;top:0;z-index:40;background:#0f172a;color:#fff;padding:16px;box-shadow:0 1px 0 rgba(255,255,255,.06),0 8px 16px rgba(0,0,0,.12)}
+    .container{max-width:var(--container);margin:0 auto}
+    .brand{display:flex;flex-direction:column;gap:6px}
+    .brand h1{margin:0;font-size:clamp(20px,3vw,28px)}
+    .brand p{margin:0;color:#cbd5e1;font-weight:500;font-size:14px}
+    nav{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px}
+    nav a{text-decoration:none;color:#cbd5e1;font-weight:600;font-size:14px;padding:6px 10px;border-radius:999px;transition:background .2s,color .2s}
+    nav a:hover{background:rgba(255,255,255,.08);color:#fff}
 
+    main{padding:28px 16px}
+    .grid{display:grid;gap:18px}
+    @media(min-width:900px){.grid.two{grid-template-columns:1fr 1fr}}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:10px}
+    .card h2{margin:0;font-size:22px}
+    .desc{color:var(--muted);margin-top:4px}
+    .pill{display:inline-block;padding:4px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-weight:700;font-size:12px;margin:4px 6px 0 0}
+    .kicker{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:#6b7280;font-weight:800}
+    .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;background:var(--accent);color:#fff;padding:10px 14px;border-radius:12px;font-weight:700}
+    .btn.secondary{background:#e5e7eb;color:#111827}
 
-<link rel="stylesheet" href="/jordanmarkland/web/widget.css">
-<script>window.DIGIJORDII_API="https://YOUR-API-HOST/ask";</script>
-<script src="/jordanmarkland/web/widget.js"></script>
+    .field{display:flex;flex-direction:column;gap:6px}
+    label{font-weight:700}
+    input, textarea{width:100%;padding:12px 12px;border-radius:12px;border:1px solid #e5e7eb;outline:none}
+    input:focus, textarea:focus{border-color:#c7d2fe;box-shadow:0 0 0 4px rgba(37,99,235,.15)}
+
+    .contact-row{display:flex;flex-wrap:wrap;gap:10px}
+    .chip{display:inline-flex;align-items:center;gap:8px;background:#e0e7ff;color:#3730a3;border:none;border-radius:999px;padding:8px 12px;font-weight:700;font-size:12px}
+    .copy{cursor:pointer}
+
+    footer{padding:40px 16px;color:#6b7280;text-align:center}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container brand">
+      <h1>Contact</h1>
+      <p>Jordan Markland · Optical Systems & Sensors • Collaboration & Speaking</p>
+      <nav>
+        <a href="index.html">Bio</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="extra-curricular.html">Extra‑curricular Experience</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Direct contact -->
+    <section class="grid two">
+      <article class="card">
+        <div class="kicker">Direct</div>
+        <h2 style="margin-top:6px">Reach Me</h2>
+        <p class="desc">I’m based in Ottawa, Canada (America/Toronto timezone). Best for collaboration, research, workshops, and product consulting.</p>
+        <div class="contact-row">
+          <button class="chip copy" data-copy="Jordanmarkland@cmail.carleton.ca" title="Copy email">📧 Jordanmarkland@cmail.carleton.ca</button>
+          <a class="chip" href="mailto:Jordanmarkland@cmail.carleton.ca?subject=Hello%20Jordan&body=Hi%20Jordan,%20">
+            Email Me
+          </a>
+        </div>
+        <div class="contact-row">
+          <button class="chip copy" data-copy="+14372887425" title="Copy phone">📞 (437) 288‑7425</button>
+          <a class="chip" href="tel:+14372887425">Call</a>
+          <a class="chip" href="sms:+14372887425">Text</a>
+        </div>
+        <div class="cta">
+          <a class="btn" id="vcard" href="#">Download vCard</a>
+          <a class="btn secondary" href="#booking">Book a chat</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="kicker">Social</div>
+        <h2 style="margin-top:6px">Profiles & Links</h2>
+        <ul class="desc" style="margin:0 0 0 18px">
+          <li><strong>GitHub:</strong> <a href="https://github.com/MrMarkland" target="_blank" rel="noopener">github.com/MrMarkland</a></li>
+          <li><strong>LinkedIn:</strong> <em>Add your link</em></li>
+          <li><strong>Portfolio:</strong> <a href="index.html">Home</a> · <a href="projects.html">Projects</a> · <a href="education.html">Education</a> · <a href="extra-curricular.html">Extra‑curricular</a></li>
+        </ul>
+        <div style="margin-top:8px">
+          <span class="pill">Collaboration</span>
+          <span class="pill">Research</span>
+          <span class="pill">Workshops</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- Booking / Calendly placeholder -->
+    <section id="booking" class="card">
+      <div class="kicker">Booking</div>
+      <h2 style="margin-top:6px">Schedule a Conversation</h2>
+      <p class="desc">Add your Calendly or booking link below. Until then, email or text to coordinate.</p>
+      <div class="cta">
+        <a class="btn" href="#" target="_blank" rel="noopener">Add Calendly Link</a>
+        <a class="btn secondary" href="mailto:Jordanmarkland@cmail.carleton.ca?subject=Meeting%20request">Request a time</a>
+      </div>
+    </section>
+
+    <!-- Contact form that works on GitHub Pages via mailto -->
+    <section class="card">
+      <div class="kicker">Form</div>
+      <h2 style="margin-top:6px">Send a Message</h2>
+      <p class="desc">This form opens your email client (works without a server on GitHub Pages).</p>
+      <form id="contactForm">
+        <div class="grid two">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+        </div>
+        <div class="field" style="margin-top:10px">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="How can I help?" required></textarea>
+        </div>
+        <div class="cta">
+          <button type="submit" class="btn">Preview Email</button>
+          <button type="reset" class="btn secondary">Clear</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Collaboration interests -->
+    <section class="grid two">
+      <article class="card">
+        <div class="kicker">Topics</div>
+        <h2 style="margin-top:6px">How I Can Help</h2>
+        <ul class="list">
+          <li>Optics & photonics experiments, polarization, interferometry.</li>
+          <li>Real‑time systems and embedded scheduling basics.</li>
+          <li>Product prototyping in Flutter/Firebase (auth, Firestore, Functions).</li>
+          <li>Workshops on practical AI for small teams and communities.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="kicker">Notes</div>
+        <h2 style="margin-top:6px">Response & Availability</h2>
+        <ul class="list">
+          <li>Timezone: America/Toronto (Ottawa).</li>
+          <li>Typically replies within 24–48 hours.</li>
+          <li>Weeknight and weekend slots available by request.</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <small>© <span id="year"></span> Jordan Markland</small>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Copy to clipboard for chips
+    document.querySelectorAll('.copy').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        try { await navigator.clipboard.writeText(btn.dataset.copy); btn.textContent = '✓ Copied'; setTimeout(()=>btn.textContent = (btn.title.includes('email')?'📧 ':'📞 ') + btn.dataset.copy.replace(/^\+1/, '+1 '), 1500); } catch(e){}
+      });
+    });
+
+    // Build a vCard on the fly
+    (function(){
+      const v = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        'N:Markland;Jordan;;;',
+        'FN:Jordan Markland',
+        'TITLE:Optical Systems & Sensors Student',
+        'EMAIL;TYPE=INTERNET,PREF:Jordanmarkland@cmail.carleton.ca',
+        'TEL;TYPE=CELL:+14372887425',
+        'ADR;TYPE=HOME:;;Ottawa;Ontario;Canada;',
+        'END:VCARD' 
+      ].join('\n');
+      const a = document.getElementById('vcard');
+      a.href = 'data:text/vcard;charset=utf-8,' + encodeURIComponent(v);
+      a.download = 'Jordan-Markland.vcf';
+    })();
+
+    // Mailto form for GitHub Pages
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent(`Message from ${name}`);
+      const body = encodeURIComponent(`From: ${name} <${email}>\n\n${msg}`);
+      window.location.href = `mailto:Jordanmarkland@cmail.carleton.ca?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
