@@ -22,11 +22,24 @@
     nav{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px}
     nav a{text-decoration:none;color:#cbd5e1;font-weight:600;font-size:14px;padding:6px 10px;border-radius:999px;transition:background .2s,color .2s}
     nav a:hover{background:rgba(255,255,255,.08);color:#fff}
-    main{padding:28px 16px}
+    main{padding:28px 16px;display:grid;gap:20px}
     .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:10px}
     .card h2{margin:0;font-size:22px}
     .desc{color:var(--muted);margin-top:4px}
+    ul{margin:0 0 0 20px}
+    li{margin:6px 0}
     footer{padding:40px 16px;color:var(--muted);text-align:center}
+      /* --- Extra layout/utilities for a fuller Bio page --- */
+    .grid{display:grid;gap:18px}
+    @media(min-width:900px){.grid.two{grid-template-columns:1fr 1fr}}
+    .pill{display:inline-block;padding:4px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-weight:700;font-size:12px;margin:4px 6px 0 0}
+    .kicker{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:#6b7280;font-weight:800}
+    .list{margin:8px 0 0 18px}
+    .stat{display:flex;align-items:baseline;gap:10px}
+    .stat .num{font-weight:800;font-size:28px}
+    .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;background:var(--accent);color:#fff;padding:10px 14px;border-radius:12px;font-weight:700}
+    .btn.secondary{background:#e5e7eb;color:#111827}
   </style>
 </head>
 <body>
@@ -45,8 +58,112 @@
   </header>
   <main class="container">
     <section class="card">
-      <h2>About Me</h2>
-      <p class="desc">I am a passionate third-year Optical Systems & Sensors student at Carleton University, with a CGPA of <strong>8.33/12</strong>. I have hands-on experience with assembly, integration, and testing of electrical and optoelectrical systems. My academic and professional journey reflects my dedication to innovation, problem-solving, and teamwork across engineering and physics domains.</p>
+      <div class="kicker">About</div>
+      <h2 style="margin-top:6px">About Me</h2>
+      <p class="desc">I’m an Optical Systems & Sensors student at Carleton University (CGPA <strong>8.33/12</strong>) who enjoys building things that work in the real world—from interferometers that shape light to mobile apps that move communities. I thrive where hardware meets software and where ideas turn into prototypes, talks, and products.</p>
+      <div class="cta">
+        <a class="btn" href="#" target="_blank" rel="noopener">Download Résumé (PDF)</a>
+        <a class="btn secondary" href="projects.html">View Projects</a>
+      </div>
+    </section>
+
+    <section class="grid two">
+      <article class="card">
+        <div class="kicker">Focus Areas</div>
+        <h2 style="margin-top:6px">What I Work On</h2>
+        <p class="desc">Optics & photonics, real‑time/embedded systems, and product‑oriented software.</p>
+        <div>
+          <span class="pill">Interferometry</span>
+          <span class="pill">Vector Beams</span>
+          <span class="pill">Optical Communications</span>
+          <span class="pill">Signal Processing</span>
+          <span class="pill">Real‑time Systems</span>
+          <span class="pill">Flutter</span>
+          <span class="pill">Firebase</span>
+          <span class="pill">MATLAB</span>
+          <span class="pill">Python</span>
+          <span class="pill">C/C++</span>
+          <span class="pill">Git/GitHub</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="kicker">At a Glance</div>
+        <h2 style="margin-top:6px">Quick Facts</h2>
+        <ul class="list">
+          <li>Currently researching re‑configurable orthogonal cylindrical vector beams using a <em>modified Sagnac interferometer</em> with plans to present at <strong>Photonics North 2025</strong>.</li>
+          <li>Hands‑on with assembly, integration, and testing of electrical & optoelectronic systems.</li>
+          <li>Product lead for “Culture Life,” a cross‑platform social app with ticketing and barcode check‑in/out.</li>
+          <li>Built real‑time chat for Ravens Hub with auth‑gated rooms and live presence.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="grid two">
+      <article class="card">
+        <div class="kicker">Education</div>
+        <h2 style="margin-top:6px">Carleton University — B.Eng, Optical Systems & Sensors</h2>
+        <p class="desc">Ottawa, ON · 2021–Present</p>
+        <ul class="list">
+          <li>Key courses: Medical Imaging & Biosensors, Optical Communications, Real‑Time Systems.</li>
+          <li>Awards: Dr. Ezra Nesbeth Foundation Undergraduate Scholarship; KCOBA Award of Excellence in Physics (CSEC).</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="kicker">Research Interests</div>
+        <h2 style="margin-top:6px">Optics & Photonics</h2>
+        <ul class="list">
+          <li>Beam shaping and polarization (radial/azimuthal vector beams)</li>
+          <li>Mode‑division multiplexing for optical communications</li>
+          <li>Optical trapping, sensing, and microscopy applications</li>
+          <li>Low‑noise detection and waveform analysis</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="grid two">
+      <article class="card">
+        <div class="kicker">Recent Work</div>
+        <h2 style="margin-top:6px">Projects Snapshot</h2>
+        <ul class="list">
+          <li><strong>Vector Beam Generator (Modified Sagnac):</strong> Simultaneous radial & azimuthal beams; analyzed mode purity.</li>
+          <li><strong>Laser Spectrum Measurement:</strong> IR diode characterization with DAQ and signal processing.</li>
+          <li><strong>Culture Life:</strong> Events module with unique barcodes and re‑entry scan rules; analytics dashboards.</li>
+          <li><strong>Ravens Hub:</strong> Real‑time group chat with faculty channels and auth‑gated access.</li>
+          <li><strong>NET3001:</strong> Solo real‑time systems build with deadline‑aware scheduling.</li>
+        </ul>
+        <div class="cta"><a class="btn secondary" href="projects.html">See detailed write‑ups</a></div>
+      </article>
+      <article class="card">
+        <div class="kicker">Leadership & Community</div>
+        <h2 style="margin-top:6px">Giving Back</h2>
+        <ul class="list">
+          <li>Youth Director — Kingston College Old Boys’ Association (Toronto), 2021–Present.</li>
+          <li>Founding contributor — Caribbean Student Association at Carleton.</li>
+          <li>Volunteer — CRA Community Volunteer Income Tax Program (2024).</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="grid two">
+      <article class="card">
+        <div class="kicker">Toolbox</div>
+        <h2 style="margin-top:6px">Technical Skills</h2>
+        <div>
+          <span class="pill">Optical Lab Setup</span>
+          <span class="pill">Polarization Optics</span>
+          <span class="pill">Oscilloscopes/DAQ</span>
+          <span class="pill">MATLAB / Python</span>
+          <span class="pill">C/C++</span>
+          <span class="pill">Flutter / Dart</span>
+          <span class="pill">Firebase (Auth, Firestore, Functions)</span>
+          <span class="pill">Git / GitHub</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="kicker">Beyond School</div>
+        <h2 style="margin-top:6px">Personal Interests</h2>
+        <p class="desc">Hands‑on with cars and practical problem‑solving, mentoring peers, and exploring how AI can amplify small teams and community impact.</p>
+      </article>
     </section>
   </main>
   <footer>
