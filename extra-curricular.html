@@ -1,1 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Extra‑curricular Experience – Jordan Markland</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f6f7fb;--card:#fff;--ink:#111827;--muted:#4b5563;--accent:#2563eb;--ring:rgba(37,99,235,.25);--shadow:0 10px 20px rgba(0,0,0,.06),0 3px 6px rgba(0,0,0,.05);--radius:18px;--container:1100px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    header{position:sticky;top:0;z-index:40;background:#0f172a;color:#fff;padding:16px;box-shadow:0 1px 0 rgba(255,255,255,.06),0 8px 16px rgba(0,0,0,.12)}
+    .container{max-width:var(--container);margin:0 auto}
+    .brand{display:flex;flex-direction:column;gap:6px}
+    .brand h1{margin:0;font-size:clamp(20px,3vw,28px)}
+    .brand p{margin:0;color:#cbd5e1;font-weight:500;font-size:14px}
+    nav{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px}
+    nav a{text-decoration:none;color:#cbd5e1;font-weight:600;font-size:14px;padding:6px 10px;border-radius:999px;transition:background .2s,color .2s}
+    nav a:hover{background:rgba(255,255,255,.08);color:#fff}
+
+    main{padding:28px 16px}
+    .grid{display:grid;gap:18px}
+    @media(min-width:900px){.grid.two{grid-template-columns:1fr 1fr}}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:10px}
+    .card h2{margin:0;font-size:22px}
+    .desc{color:var(--muted);margin-top:4px}
+    .list{margin:8px 0 0 18px}
+    .pill{display:inline-block;padding:4px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-weight:700;font-size:12px;margin:4px 6px 0 0}
+    .kicker{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:#6b7280;font-weight:800}
+    .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;background:var(--accent);color:#fff;padding:10px 14px;border-radius:12px;font-weight:700}
+    footer{padding:40px 16px;color:#6b7280;text-align:center}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container brand">
+      <h1>Extra‑curricular Experience</h1>
+      <p>Jordan Markland · Leadership • Community • Service</p>
+      <nav>
+        <a href="index.html">Bio</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="extra-curricular.html" aria-current="page">Extra‑curricular Experience</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Leadership roles -->
+    <section class="grid two">
+      <article class="card">
+        <div class="kicker">Leadership</div>
+        <h2 style="margin-top:6px">Kingston College Old Boys’ Association – Toronto</h2>
+        <p class="desc">Youth Director • 2021 – Present</p>
+        <ul class="list">
+          <li>Organize mentorship and youth programs; coordinate volunteers and event logistics.</li>
+          <li>Support scholarship initiatives and community outreach for students and alumni.</li>
+        </ul>
+        <div>
+          <span class="pill">Mentorship</span>
+          <span class="pill">Event Planning</span>
+          <span class="pill">Community Outreach</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="kicker">Campus</div>
+        <h2 style="margin-top:6px">Caribbean Student Association (Carleton University)</h2>
+        <p class="desc">Founding contributor & events support • Ongoing</p>
+        <ul class="list">
+          <li>Helped establish the CSA as a hub for cultural retention and cross‑cultural learning.</li>
+          <li>Assist with events, collaborations, and member onboarding.</li>
+        </ul>
+        <div>
+          <span class="pill">Cultural Programming</span>
+          <span class="pill">Student Life</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- Volunteering & service -->
+    <section class="grid two">
+      <article class="card">
+        <div class="kicker">Volunteering</div>
+        <h2 style="margin-top:6px">CRA Community Volunteer Income Tax Program</h2>
+        <p class="desc">Tax season 2024 • International Students Services Organization</p>
+        <ul class="list">
+          <li>Assisted community members with tax filing and guidance under CVITP.</li>
+          <li>Focused on newcomers and students navigating Canadian tax requirements.</li>
+        </ul>
+        <div>
+          <span class="pill">Service</span>
+          <span class="pill">Financial Literacy</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="kicker">Community</div>
+        <h2 style="margin-top:6px">Cancer & Disabilities Organization</h2>
+        <p class="desc">Volunteer • 2019</p>
+        <ul class="list">
+          <li>Supported awareness and assistance programs for individuals and families.</li>
+        </ul>
+        <div>
+          <span class="pill">Health Advocacy</span>
+          <span class="pill">Community Support</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- Clubs prior to and during university -->
+    <section class="grid two">
+      <article class="card">
+        <div class="kicker">Clubs</div>
+        <h2 style="margin-top:6px">Rotaract Club (Carleton University)</h2>
+        <p class="desc">Member • 2022</p>
+        <ul class="list">
+          <li>Participated in service projects and leadership development with Rotaract.</li>
+        </ul>
+        <div>
+          <span class="pill">Service</span>
+          <span class="pill">Leadership</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="kicker">Clubs</div>
+        <h2 style="margin-top:6px">Key Club (Jamaica)</h2>
+        <p class="desc">Member • 2014 – 2020</p>
+        <ul class="list">
+          <li>Engaged in continuous community service and student leadership initiatives.</li>
+        </ul>
+        <div>
+          <span class="pill">Youth Leadership</span>
+          <span class="pill">Service Learning</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- Public speaking & training -->
+    <section class="grid two">
+      <article class="card">
+        <div class="kicker">Workshops</div>
+        <h2 style="margin-top:6px">AI Training & Public Speaking</h2>
+        <p class="desc">Program lead & presenter • 2025</p>
+        <ul class="list">
+          <li>Developed and delivered accessible sessions on practical AI for business (“How to make money with AI”).</li>
+          <li>Built agendas, exercises, and registration/certification flows for attendees.</li>
+        </ul>
+        <div>
+          <span class="pill">Public Speaking</span>
+          <span class="pill">Curriculum Design</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="kicker">Organization</div>
+        <h2 style="margin-top:6px">Nexus Labour Relation Consultants</h2>
+        <p class="desc">Deputy Director • Launch & community engagement</p>
+        <ul class="list">
+          <li>Coordinated branding, slide development, teaser sessions, and outreach activities.</li>
+          <li>Explored AI‑assisted differentiators to add value for clients.</li>
+        </ul>
+        <div>
+          <span class="pill">Leadership</span>
+          <span class="pill">GTM</span>
+          <span class="pill">Community</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- Recognition / School leadership -->
+    <section class="grid two">
+      <article class="card">
+        <div class="kicker">School Leadership</div>
+        <h2 style="margin-top:6px">Head Boy — Kingston College</h2>
+        <p class="desc">2020 – 2021</p>
+        <ul class="list">
+          <li>Led student body and served as liaison with administration; supported academic and cultural programs.</li>
+        </ul>
+        <div>
+          <span class="pill">Leadership</span>
+          <span class="pill">Mentorship</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="kicker">Highlights</div>
+        <h2 style="margin-top:6px">Awards & Recognition</h2>
+        <ul class="list">
+          <li>KCOBA Award of Excellence in Physics (CSEC).</li>
+          <li>Ongoing recognition for youth leadership and community involvement.</li>
+        </ul>
+        <div>
+          <span class="pill">STEM</span>
+          <span class="pill">Community Impact</span>
+        </div>
+      </article>
+    </section>
+
+    <!-- Callouts -->
+    <section class="grid two">
+      <article class="card">
+        <div class="kicker">Interests</div>
+        <h2 style="margin-top:6px">How I Spend My Free Time</h2>
+        <p class="desc">Hands‑on with cars, mentoring peers, and exploring where AI can amplify community and small‑team work.</p>
+      </article>
+      <article class="card">
+        <div class="kicker">Get Involved</div>
+        <h2 style="margin-top:6px">Let’s Collaborate</h2>
+        <p class="desc">If your organization supports youth, education, or tech literacy, I’m happy to help with workshops or events.</p>
+        <div class="cta">
+          <a class="btn" href="contact.html">Contact Me</a>
+          <a class="btn" href="projects.html">See Projects</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <small>© <span id="year"></span> Jordan Markland</small>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
 
