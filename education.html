@@ -1,1 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Education – Jordan Markland</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f6f7fb;--card:#fff;--ink:#111827;--muted:#4b5563;--accent:#2563eb;--ring:rgba(37,99,235,.25);--shadow:0 10px 20px rgba(0,0,0,.06),0 3px 6px rgba(0,0,0,.05);--radius:18px;--container:1100px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    header{position:sticky;top:0;z-index:40;background:#0f172a;color:#fff;padding:16px;box-shadow:0 1px 0 rgba(255,255,255,.06),0 8px 16px rgba(0,0,0,.12)}
+    .container{max-width:var(--container);margin:0 auto}
+    .brand{display:flex;flex-direction:column;gap:6px}
+    .brand h1{margin:0;font-size:clamp(20px,3vw,28px)}
+    .brand p{margin:0;color:#cbd5e1;font-weight:500;font-size:14px}
+    nav{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px}
+    nav a{text-decoration:none;color:#cbd5e1;font-weight:600;font-size:14px;padding:6px 10px;border-radius:999px;transition:background .2s,color .2s}
+    nav a:hover{background:rgba(255,255,255,.08);color:#fff}
+
+    main{padding:28px 16px}
+    .grid{display:grid;gap:18px}
+    @media(min-width:900px){.grid.two{grid-template-columns:1fr 1fr}}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:10px}
+    .card h2{margin:0;font-size:22px}
+    .desc{color:var(--muted);margin-top:4px}
+    .pill{display:inline-block;padding:4px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-weight:700;font-size:12px;margin:4px 6px 0 0}
+    .kicker{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:#6b7280;font-weight:800}
+    .list{margin:8px 0 0 18px}
+    .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+    .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;background:var(--accent);color:#fff;padding:10px 14px;border-radius:12px;font-weight:700}
+    footer{padding:40px 16px;color:#6b7280;text-align:center}
+    .timeline{position:relative;margin:0;padding-left:18px}
+    .timeline:before{content:"";position:absolute;left:6px;top:2px;bottom:2px;width:2px;background:#e5e7eb;border-radius:2px}
+    .titem{position:relative;margin:0 0 12px}
+    .titem:before{content:"";position:absolute;left:-2px;top:.35em;width:10px;height:10px;background:#2563eb;border-radius:999px;box-shadow:0 0 0 3px rgba(37,99,235,.18)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container brand">
+      <h1>Education</h1>
+      <p>Jordan Markland · Optical Systems & Sensors • Academics & Research</p>
+      <nav>
+        <a href="index.html">Bio</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html" aria-current="page">Education</a>
+        <a href="experience.html">Extra-curricular Experience</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Degree Overview -->
+    <section class="card">
+      <div class="kicker">Degree</div>
+      <h2 style="margin-top:6px">Carleton University — B.Eng, Optical Systems & Sensors</h2>
+      <p class="desc">Ottawa, ON • 2021–Present • CGPA <strong>8.33/12</strong></p>
+      <div>
+        <span class="pill">Optics & Photonics</span>
+        <span class="pill">Signal/Waveform Analysis</span>
+        <span class="pill">Real‑time Systems</span>
+        <span class="pill">Software + Hardware</span>
+      </div>
+      <div class="cta">
+        <a class="btn" href="#" target="_blank" rel="noopener">Download Unofficial Transcript (PDF)</a>
+        <a class="btn" href="#" target="_blank" rel="noopener">Academic CV</a>
+      </div>
+    </section>
+
+    <!-- Coursework & Labs -->
+    <section class="grid two">
+      <article class="card">
+        <div class="kicker">Coursework</div>
+        <h2 style="margin-top:6px">Core & Highlighted Courses</h2>
+        <ul class="list">
+          <li>Medical Imaging & Biosensors (OSS 4004 / OSS 3003 topics)</li>
+          <li>Optical Communications and Photonic Devices</li>
+          <li>Real‑Time Systems (NET3001) — deterministic scheduling, latency/jitter analysis</li>
+          <li>Advanced Cybersecurity & Incident Response (IRM3004 content integration)</li>
+          <li>Command Line, Git/GitHub, and Versioning (IRM3004)</li>
+        </ul>
+        <div>
+          <span class="pill">MATLAB</span>
+          <span class="pill">Python</span>
+          <span class="pill">C/C++</span>
+          <span class="pill">Lab Instrumentation</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="kicker">Labs & Practicum</div>
+        <h2 style="margin-top:6px">Hands‑on Learning</h2>
+        <ul class="list">
+          <li>Laser spectrum measurement with IR diodes and optical detectors; DAQ + denoising.</li>
+          <li>Assembly, integration, and testing of optoelectronic systems.</li>
+          <li>Design of experiments for polarization optics and beam shaping.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Awards & Scholarships -->
+    <section class="grid two">
+      <article class="card">
+        <div class="kicker">Recognition</div>
+        <h2 style="margin-top:6px">Awards & Scholarships</h2>
+        <ul class="list">
+          <li>Dr. Ezra Nesbeth Foundation Undergraduate Scholarship</li>
+          <li>KCOBA Award of Excellence in Physics (CSEC)</li>
+          <li>Dean’s/departmental recognition for leadership and community involvement (various)</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="kicker">Pre‑University</div>
+        <h2 style="margin-top:6px">Kingston College, Jamaica</h2>
+        <p class="desc">Diploma (2014–2020). Head Boy; strong emphasis in physics and mathematics.</p>
+      </article>
+    </section>
+
+    <!-- Research & Publications -->
+    <section class="grid two">
+      <article class="card">
+        <div class="kicker">Research</div>
+        <h2 style="margin-top:6px">Current Work</h2>
+        <ul class="list">
+          <li>Generation of re‑configurable orthogonal cylindrical vector beams using a modified Sagnac interferometer (simultaneous radial & azimuthal beams).</li>
+          <li>Applications: mode‑division multiplexing, optical trapping, sensing, and microscopy.</li>
+        </ul>
+        <div>
+          <span class="pill">Interferometry</span>
+          <span class="pill">Vector Beams</span>
+          <span class="pill">Polarization Optics</span>
+        </div>
+      </article>
+      <article class="card">
+        <div class="kicker">Publications & Conferences</div>
+        <h2 style="margin-top:6px">Planned Outputs</h2>
+        <ul class="list">
+          <li>Manuscript submission to a peer‑reviewed optical journal (2025).</li>
+          <li>Presentation at <strong>Photonics North 2025</strong> (Ottawa).</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Roadmap & Priorities -->
+    <section class="grid two">
+      <article class="card">
+        <div class="kicker">Roadmap</div>
+        <h2 style="margin-top:6px">Near‑Term Academic Priorities</h2>
+        <ul class="list timeline">
+          <li class="titem"><strong>Summer–Fall 2025:</strong> Finalize experiments; quantify mode purity & stability for vector beam setup.</li>
+          <li class="titem"><strong>Fall 2025:</strong> Draft and submit the journal manuscript; prepare conference materials.</li>
+          <li class="titem"><strong>2025–2026:</strong> Strengthen portfolio with combined optics + real‑time control projects; mentor peers.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="kicker">Longer‑Term</div>
+        <h2 style="margin-top:6px">Goals After Graduation</h2>
+        <ul class="list">
+          <li>Advance in photonics/optical systems roles, bridging R&D and product development.</li>
+          <li>Pursue graduate study or industry research in optical communications and sensing.</li>
+          <li>Publish applied research while building practical products that serve communities.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Activities & Service -->
+    <section class="grid two">
+      <article class="card">
+        <div class="kicker">Leadership</div>
+        <h2 style="margin-top:6px">Campus & Community</h2>
+        <ul class="list">
+          <li>Youth Director — Kingston College Old Boys’ Association (Toronto), 2021–Present.</li>
+          <li>Founding contributor — Caribbean Student Association at Carleton.</li>
+          <li>CRA Community Volunteer Income Tax Program (2024).</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="kicker">Skills in Context</div>
+        <h2 style="margin-top:6px">Lab & Software Toolkit</h2>
+        <div>
+          <span class="pill">Oscilloscopes/DAQ</span>
+          <span class="pill">Polarizers/Waveplates/PBS</span>
+          <span class="pill">MATLAB • Python • C/C++</span>
+          <span class="pill">Flutter/Dart</span>
+          <span class="pill">Firebase (Auth, Firestore, Functions)</span>
+          <span class="pill">Git/GitHub</span>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <small>© <span id="year"></span> Jordan Markland</small>
+  </footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
 
