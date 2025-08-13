@@ -1,1 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects – Jordan Markland</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f6f7fb;--card:#fff;--ink:#111827;--muted:#4b5563;--accent:#2563eb;--accent-ink:#1e3a8a;--ring:rgba(37,99,235,.25);--shadow:0 10px 20px rgba(0,0,0,.06),0 3px 6px rgba(0,0,0,.05);--radius:18px;--container:1100px
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    header{position:sticky;top:0;z-index:40;background:#0f172a;color:#fff;padding:22px 16px;box-shadow:0 1px 0 rgba(255,255,255,.06),0 8px 16px rgba(0,0,0,.12)}
+    .container{max-width:var(--container);margin:0 auto}
+    .brand{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand h1{margin:0;font-size:clamp(20px,3vw,28px)}
+    .brand p{margin:4px 0 0;color:#cbd5e1;font-weight:500;font-size:14px}
+    main{padding:28px 16px}
+    .controls{display:flex;flex-wrap:wrap;gap:8px 12px;margin:0 0 18px}
+    .chip{background:#e0e7ff;color:#3730a3;border:none;border-radius:999px;padding:8px 12px;font-weight:700;font-size:12px;cursor:pointer}
+    .chip[aria-pressed="true"]{background:#fff;color:#0f172a;box-shadow:var(--shadow)}
+    .search{flex:1;min-width:240px;display:flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:8px 12px;box-shadow:var(--shadow)}
+    .search input{border:none;outline:none;flex:1;font-size:14px}
+    .grid{display:grid;gap:18px}
+    @media (min-width:880px){.grid{grid-template-columns:repeat(2,1fr)}}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:10px}
+    .card h3{margin:0;font-size:20px}
+    .meta{display:flex;flex-wrap:wrap;gap:8px;color:var(--muted);font-size:13px}
+    .pill{display:inline-block;padding:4px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-weight:700;font-size:12px}
+    .desc{color:var(--muted);margin:2px 0 0}
+    .list{margin:0 0 0 18px}
+    .cta{display:flex;gap:10px;margin-top:8px}
+    .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;background:var(--accent);color:#fff;padding:10px 14px;border-radius:12px;font-weight:700}
+    .btn.secondary{background:#e5e7eb;color:#111827}
+    footer{padding:40px 16px;color:var(--muted);text-align:center}
+    a:focus-visible,button:focus-visible,.card:focus-visible{outline:3px solid var(--ring);outline-offset:2px;border-radius:12px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container brand">
+      <div>
+        <h1>Projects</h1>
+        <p>Jordan Markland · Optical Systems & Sensors • Software • Research</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Controls -->
+    <div class="controls" role="toolbar" aria-label="Project filters and search">
+      <button class="chip" data-filter="all" aria-pressed="true">All</button>
+      <button class="chip" data-filter="research">Research</button>
+      <button class="chip" data-filter="software">Software</button>
+      <button class="chip" data-filter="engineering">Engineering</button>
+      <button class="chip" data-filter="leadership">Leadership</button>
+      <div class="search" role="search">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24"><path d="M10 18a8 8 0 1 1 5.293-14.293A8 8 0 0 1 10 18Zm8.707 1.293-3.925-3.925" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <input id="search" type="search" placeholder="Search projects (e.g., lasers, Flutter, barcode)" aria-label="Search projects" />
+      </div>
+    </div>
+
+    <!-- Project Grid -->
+    <div id="grid" class="grid" aria-live="polite"></div>
+  </main>
+
+  <footer>
+    <small>© <span id="year"></span> Jordan Markland</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // --- Data -----------------------------------------------------------------
+    const projects = [
+      {
+        title: 'Re‑configurable Orthogonal Cylindrical Vector Beams (Modified Sagnac Interferometer)',
+        year: '2024–2025',
+        area: ['research','engineering'],
+        summary: 'Built a modified Sagnac interferometer that simultaneously generates radially and azimuthally polarized beams. Targeted for mode-division multiplexing, optical trapping, sensing, and microscopy.',
+        bullets: [
+          'Designed polarization optics with waveplates, PBS, and beam-shaping elements',
+          'Demonstrated simultaneous generation of two vector beams and analyzed mode purity',
+          'Preparing manuscript for an optics journal and presenting at Photonics North 2025 (Ottawa)'
+        ],
+        tags: ['Optics','Interferometry','Vector Beams','Polarization'],
+        links: { poster: '#', paper: '#'}
+      },
+      {
+        title: 'Measurement of Laser Spectrum',
+        year: '2023',
+        area: ['research'],
+        summary: 'Analyzed IR laser diode output using optical detectors and waveform processing; delivered technical presentation of results.',
+        bullets: [
+          'Built data‑acquisition pipeline and noise‑reduction workflow',
+          'Estimated spectral characteristics and stability over temperature'
+        ],
+        tags: ['IR Lasers','DAQ','Signal Processing']
+      },
+      {
+        title: 'Culture Life – Cross‑platform Social App (iOS • Android • Web)',
+        year: '2025',
+        area: ['software','leadership'],
+        summary: 'Product lead for a creator‑focused social platform featuring short/long video, stories, events, and community threads with monetization (ads, subscriptions, virtual gifting).',
+        bullets: [
+          'Defined end‑to‑end product scope and UX; coordinated 3‑person dev team',
+          'Built demo app with hardcoded content for pitches and user testing',
+          'Implemented events module with ticketing, unique barcodes, and check‑in/out tracking'
+        ],
+        tags: ['Flutter','Firebase','Stripe','Barcode','Product'],
+        links: { demo: '#', repo: '#'}
+      },
+      {
+        title: 'Event Tickets: Unique Barcode + Scan‑In/Out Logic',
+        year: '2025',
+        area: ['software'],
+        summary: 'Feature for Culture Life enabling hosts to issue tickets (free/paid) and scan attendees with per‑ticket unique codes. Supports up to three re‑entry scans after initial admission.',
+        bullets: [
+          'Modeled ticket lifecycle and state machine (issued → scanned‑in → re‑entry n ≤ 3)',
+          'Aggregated host analytics and charts for sales and attendance',
+          'Designed data schema for QR/Code128 payloads'
+        ],
+        tags: ['Flutter','Dart','Cloud Functions','Firestore','QR/Barcode']
+      },
+      {
+        title: 'Ravens Hub — Real‑time Faculty & General Chat',
+        year: '2025',
+        area: ['software'],
+        summary: 'Web chat with general and faculty‑specific rooms; gated by authentication and real‑time messaging.',
+        bullets: [
+          'Architected auth‑gated rooms; presence and typing indicators',
+          'Optimized listeners and indexes for scalable Firestore reads'
+        ],
+        tags: ['Web','Realtime','Auth','Firestore']
+      },
+      {
+        title: 'NET3001 Real‑Time Systems — Final Project (Solo)',
+        year: '2025',
+        area: ['software','engineering'],
+        summary: 'Integrated learnings from weekly assignments into a single real‑time systems build with deterministic scheduling and I/O.',
+        bullets: [
+          'Implemented periodic tasks with deadline‑aware scheduling',
+          'Benchmarked latency and jitter; wrote test harnesses'
+        ],
+        tags: ['C/C++','Real‑Time','Scheduling']
+      },
+      {
+        title: 'Nexus Labour Relation Consultants — Brand & Launch Prep',
+        year: '2025',
+        area: ['leadership','software'],
+        summary: 'Coordinated go‑to‑market tasks: logo, presentation revamp, teaser session plan, registration + certificate flows; explored AI‑assisted differentiators for services.',
+        bullets: [
+          'Built slide deck with simplified narrative: “How to make money with AI”',
+          'Planned month‑long launch activities and stakeholder outreach'
+        ],
+        tags: ['GTM','Design','AI Training']
+      },
+      {
+        title: 'Community & Leadership — KCOBA Toronto + CSA',
+        year: '2021–Present',
+        area: ['leadership'],
+        summary: 'Youth Director for KCOBA Toronto; founding contributor to Carleton CSA organizing cultural events and mentorship.',
+        bullets: [
+          'Led programs, coordinated events, and mentored students'
+        ],
+        tags: ['Leadership','Community']
+      }
+    ];
+
+    // --- Render ----------------------------------------------------------------
+    const grid = document.getElementById('grid');
+    const chips = [...document.querySelectorAll('.chip')];
+    const searchInput = document.getElementById('search');
+
+    let active = 'all';
+    let query = '';
+
+    function render(){
+      grid.innerHTML = '';
+      const q = query.trim().toLowerCase();
+      const filtered = projects.filter(p => (active==='all' || p.area.includes(active)) && (
+        !q || p.title.toLowerCase().includes(q) || p.summary.toLowerCase().includes(q) || p.tags.join(' ').toLowerCase().includes(q)
+      ));
+
+      if(!filtered.length){
+        grid.innerHTML = `<p class="desc">No projects found. Try a different filter or search term.</p>`;
+        return;
+      }
+
+      filtered.forEach(p => {
+        const el = document.createElement('article');
+        el.className = 'card';
+        el.innerHTML = `
+          <header>
+            <h3>${p.title}</h3>
+            <div class="meta"><span>${p.year}</span> • ${p.area.map(a=>`<span class="pill">${titleCase(a)}</span>`).join(' ')}</div>
+          </header>
+          <p class="desc">${p.summary}</p>
+          ${p.bullets?`<ul class="list">${p.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>`:''}
+          <div class="meta">${(p.tags||[]).map(t=>`<span class="pill">${t}</span>`).join(' ')}</div>
+          ${p.links? renderLinks(p.links):''}
+        `;
+        grid.appendChild(el);
+      });
+    }
+
+    function renderLinks(links){
+      const items = Object.entries(links).filter(([k,v]) => v && v !== '#').map(([k,v]) => {
+        return `<a class="btn" href="${v}" target="_blank" rel="noopener">${titleCase(k)}</a>`
+      }).join('');
+      return items ? `<div class="cta">${items}</div>` : '';
+    }
+
+    function titleCase(str){ return str.charAt(0).toUpperCase() + str.slice(1); }
+
+    chips.forEach(btn => btn.addEventListener('click', () => {
+      chips.forEach(b => b.setAttribute('aria-pressed','false'));
+      btn.setAttribute('aria-pressed','true');
+      active = btn.dataset.filter;
+      render();
+    }));
+
+    searchInput.addEventListener('input', (e)=>{ query = e.target.value; render(); });
+
+    render();
+  </script>
+</body>
+</html>
 
