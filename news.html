@@ -1,1 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>News – Jordan Markland</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f6f7fb;--card:#fff;--ink:#111827;--muted:#4b5563;--accent:#2563eb;--ring:rgba(37,99,235,.25);--shadow:0 10px 20px rgba(0,0,0,.06),0 3px 6px rgba(0,0,0,.05);--radius:18px;--container:1100px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    header{position:sticky;top:0;z-index:40;background:#0f172a;color:#fff;padding:16px;box-shadow:0 1px 0 rgba(255,255,255,.06),0 8px 16px rgba(0,0,0,.12)}
+    .container{max-width:var(--container);margin:0 auto}
+    .brand{display:flex;flex-direction:column;gap:6px}
+    .brand h1{margin:0;font-size:clamp(20px,3vw,28px)}
+    .brand p{margin:0;color:#cbd5e1;font-weight:500;font-size:14px}
+    nav{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px}
+    nav a{text-decoration:none;color:#cbd5e1;font-weight:600;font-size:14px;padding:6px 10px;border-radius:999px;transition:background .2s,color .2s}
+    nav a:hover{background:rgba(255,255,255,.08);color:#fff}
+
+    main{padding:28px 16px}
+    .kicker{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:#6b7280;font-weight:800}
+    .pill{display:inline-block;padding:4px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-weight:700;font-size:12px;margin:4px 6px 0 0}
+    .grid{display:grid;gap:18px}
+    @media(min-width:900px){.grid.two{grid-template-columns:1fr 1fr}}
+
+    /* News list */
+    .news-card{position:relative;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;display:flex;flex-direction:column;gap:12px}
+    .meta{display:flex;flex-wrap:wrap;gap:10px;color:#6b7280;font-size:13px}
+    .headline{margin:0;font-size:20px}
+    .desc{color:#4b5563;margin:4px 0 0}
+    .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+    .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;background:var(--accent);color:#fff;padding:10px 14px;border-radius:12px;font-weight:700}
+    .btn.secondary{background:#e5e7eb;color:#111827}
+
+    /* image placeholder */
+    .ph{width:100%;aspect-ratio:16/9;border-radius:12px;background:repeating-linear-gradient(45deg,#eef2ff,#eef2ff 12px,#e0e7ff 12px,#e0e7ff 24px);display:flex;align-items:center;justify-content:center;color:#3730a3;font-weight:800}
+    figure{margin:0}
+    figcaption{margin-top:6px;color:#6b7280;font-size:12px}
+
+    footer{padding:40px 16px;color:#6b7280;text-align:center}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container brand">
+      <h1>News</h1>
+      <p>Jordan Markland · Achievements • Announcements • Press‑style updates</p>
+      <nav>
+        <a href="index.html">Bio</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="extra-curricular.html">Extra‑curricular Experience</a>
+        <a href="news.html" aria-current="page">News</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid">
+
+      <!-- 2025-08 Site relaunch -->
+      <article class="news-card">
+        <div class="meta"><strong>August 13, 2025</strong> • Website
+          <span class="pill">Portfolio</span>
+          <span class="pill">Design</span>
+        </div>
+        <h2 class="headline">New personal website launched with unified theme and project write‑ups</h2>
+        <figure>
+          <div class="ph">IMAGE PLACEHOLDER</div>
+          <figcaption>Drop a screenshot of the homepage or a hero image here.</figcaption>
+        </figure>
+        <p class="desc">Rolled out a cohesive multi‑page site (Bio, Projects, Education, Extra‑curricular, Contact, News) with accessible design and fast static hosting for GitHub Pages.</p>
+        <div class="cta">
+          <a class="btn" href="#" target="_blank" rel="noopener">Live site link (add)</a>
+          <a class="btn secondary" href="#" target="_blank" rel="noopener">GitHub repo (add)</a>
+        </div>
+      </article>
+
+      <!-- 2025-07 Ravens Hub chat milestone -->
+      <article class="news-card">
+        <div class="meta"><strong>July 2025</strong> • Software
+          <span class="pill">Realtime</span>
+          <span class="pill">Firestore</span>
+        </div>
+        <h2 class="headline">Ravens Hub: faculty + general chat feature completed</h2>
+        <figure>
+          <div class="ph">IMAGE PLACEHOLDER</div>
+          <figcaption>Screenshot of chat rooms UI or architecture diagram.</figcaption>
+        </figure>
+        <p class="desc">Implemented auth‑gated rooms, typing indicators, and efficient listeners. Built for scalable reads and smooth UX across web clients.</p>
+        <div class="cta">
+          <a class="btn" href="#" target="_blank" rel="noopener">Demo / repo (add)</a>
+          <a class="btn secondary" href="projects.html">Project details</a>
+        </div>
+      </article>
+
+      <!-- 2025-06 Culture Life tickets milestone -->
+      <article class="news-card">
+        <div class="meta"><strong>June 2025</strong> • Product
+          <span class="pill">Flutter</span>
+          <span class="pill">Barcode</span>
+        </div>
+        <h2 class="headline">Culture Life: ticketing with unique barcodes and re‑entry tracking</h2>
+        <figure>
+          <div class="ph">IMAGE PLACEHOLDER</div>
+          <figcaption>Event poster or ticket UI mockup.</figcaption>
+        </figure>
+        <p class="desc">Shipped event module supporting free/paid tickets, per‑ticket unique codes, and up to three re‑entries post admission. Added host analytics charts.</p>
+        <div class="cta">
+          <a class="btn" href="#" target="_blank" rel="noopener">Feature write‑up (add)</a>
+          <a class="btn secondary" href="projects.html">Project details</a>
+        </div>
+      </article>
+
+      <!-- 2025-05 Culture Life demo -->
+      <article class="news-card">
+        <div class="meta"><strong>May 2025</strong> • Product
+          <span class="pill">Prototype</span>
+          <span class="pill">Startup</span>
+        </div>
+        <h2 class="headline">Culture Life demo app released for testing and pitches</h2>
+        <figure>
+          <div class="ph">IMAGE PLACEHOLDER</div>
+          <figcaption>Short video preview or app screenshots.</figcaption>
+        </figure>
+        <p class="desc">Delivered a cross‑platform demo (iOS, Android, web) with stories, shorts, events, and community threads to validate UX and feature scope.</p>
+        <div class="cta">
+          <a class="btn" href="#" target="_blank" rel="noopener">Test build / website (add)</a>
+          <a class="btn secondary" href="projects.html">Project details</a>
+        </div>
+      </article>
+
+      <!-- 2025-04 Research outputs planned -->
+      <article class="news-card">
+        <div class="meta"><strong>April 2025</strong> • Research
+          <span class="pill">Optics</span>
+          <span class="pill">Vector Beams</span>
+        </div>
+        <h2 class="headline">Vector‑beam interferometer experiments advancing toward publication and conference</h2>
+        <figure>
+          <div class="ph">IMAGE PLACEHOLDER</div>
+          <figcaption>Optical bench setup or simulation render.</figcaption>
+        </figure>
+        <p class="desc">Continuing work on a modified Sagnac interferometer to generate orthogonal cylindrical vector beams (radial & azimuthal). Preparing a 2025 journal submission and materials for Photonics North 2025 (Ottawa).</p>
+        <div class="cta">
+          <a class="btn" href="#" target="_blank" rel="noopener">Preprint / poster (add)</a>
+          <a class="btn secondary" href="projects.html">Project details</a>
+        </div>
+      </article>
+
+      <!-- 2024-10 Nexus leadership -->
+      <article class="news-card">
+        <div class="meta"><strong>October 2024</strong> • Leadership
+          <span class="pill">GTM</span>
+          <span class="pill">Training</span>
+        </div>
+        <h2 class="headline">Appointed Deputy Director at Nexus Labour Relation Consultants</h2>
+        <figure>
+          <div class="ph">IMAGE PLACEHOLDER</div>
+          <figcaption>Branding slide or team photo.</figcaption>
+        </figure>
+        <p class="desc">Coordinating launch activities, AI‑assisted training sessions, and community engagement. Built slide deck and registration/certification flows for workshops.</p>
+        <div class="cta">
+          <a class="btn" href="#" target="_blank" rel="noopener">Company page (add)</a>
+          <a class="btn secondary" href="extra-curricular.html">Role details</a>
+        </div>
+      </article>
+
+      <!-- 2024-04 CRA CVITP -->
+      <article class="news-card">
+        <div class="meta"><strong>April 2024</strong> • Service
+          <span class="pill">Volunteering</span>
+        </div>
+        <h2 class="headline">Volunteered with CRA Community Volunteer Income Tax Program</h2>
+        <figure>
+          <div class="ph">IMAGE PLACEHOLDER</div>
+          <figcaption>Outreach photo or CVITP poster.</figcaption>
+        </figure>
+        <p class="desc">Supported community members—especially international students—with tax filing through the International Students Services Organization.</p>
+        <div class="cta">
+          <a class="btn" href="#" target="_blank" rel="noopener">Program link (add)</a>
+          <a class="btn secondary" href="extra-curricular.html">More community work</a>
+        </div>
+      </article>
+
+      <!-- 2024-02 PR milestone -->
+      <article class="news-card">
+        <div class="meta"><strong>February 2024</strong> • Milestone
+          <span class="pill">Canada</span>
+        </div>
+        <h2 class="headline">Granted Permanent Resident status in Canada</h2>
+        <figure>
+          <div class="ph">IMAGE PLACEHOLDER</div>
+          <figcaption>Celebratory photo or document (redact sensitive info).</figcaption>
+        </figure>
+        <p class="desc">Became a Canadian permanent resident. Planning to apply for citizenship around November 2025, subject to eligibility rules.</p>
+        <div class="cta">
+          <a class="btn" href="#" target="_blank" rel="noopener">Announcement / press (add)</a>
+          <a class="btn secondary" href="education.html">Academic journey</a>
+        </div>
+      </article>
+
+      <!-- 2021–Present KCOBA Youth Director -->
+      <article class="news-card">
+        <div class="meta"><strong>2021 – Present</strong> • Leadership
+          <span class="pill">Youth Director</span>
+        </div>
+        <h2 class="headline">Youth Director for Kingston College Old Boys’ Association (Toronto)</h2>
+        <figure>
+          <div class="ph">IMAGE PLACEHOLDER</div>
+          <figcaption>Event photo or mentorship session.</figcaption>
+        </figure>
+        <p class="desc">Overseeing youth programs, mentorship, and community outreach within the KCOBA Toronto chapter.</p>
+        <div class="cta">
+          <a class="btn" href="#" target="_blank" rel="noopener">KCOBA page (add)</a>
+          <a class="btn secondary" href="extra-curricular.html">More leadership</a>
+        </div>
+      </article>
+
+      <!-- 2021 Start at Carleton -->
+      <article class="news-card">
+        <div class="meta"><strong>September 2021</strong> • Education
+          <span class="pill">Carleton University</span>
+        </div>
+        <h2 class="headline">Started B.Eng in Optical Systems & Sensors at Carleton University</h2>
+        <figure>
+          <div class="ph">IMAGE PLACEHOLDER</div>
+          <figcaption>Campus photo or lab image.</figcaption>
+        </figure>
+        <p class="desc">Began undergraduate studies focusing on optics & photonics, real‑time systems, and applied engineering.</p>
+        <div class="cta">
+          <a class="btn" href="#" target="_blank" rel="noopener">Carleton profile (add)</a>
+          <a class="btn secondary" href="education.html">See coursework</a>
+        </div>
+      </article>
+
+      <!-- 2020 KCOBA Physics award -->
+      <article class="news-card">
+        <div class="meta"><strong>2020</strong> • Award
+          <span class="pill">STEM</span>
+        </div>
+        <h2 class="headline">KCOBA Award of Excellence in Physics (CSEC)</h2>
+        <figure>
+          <div class="ph">IMAGE PLACEHOLDER</div>
+          <figcaption>Award photo or certificate (optional).</figcaption>
+        </figure>
+        <p class="desc">Recognized for excellence in physics while at Kingston College, Jamaica.</p>
+        <div class="cta">
+          <a class="btn" href="#" target="_blank" rel="noopener">Press/announcement (add)</a>
+          <a class="btn secondary" href="education.html">Education page</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <small>© <span id="year"></span> Jordan Markland</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
