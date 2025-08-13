@@ -38,6 +38,11 @@
     .btn.secondary{background:#e5e7eb;color:#111827}
     footer{padding:40px 16px;color:var(--muted);text-align:center}
     a:focus-visible,button:focus-visible,.card:focus-visible{outline:3px solid var(--ring);outline-offset:2px;border-radius:12px}
+      /* Sub‑navigation under page title */
+    .subnav{margin-top:8px;display:flex;flex-wrap:wrap;gap:12px}
+    .subnav a{color:#cbd5e1;text-decoration:none;font-weight:700;font-size:14px;padding:6px 10px;border-radius:10px;transition:background .2s,color .2s}
+    .subnav a:hover{background:rgba(255,255,255,.1);color:#fff}
+    .subnav a[aria-current="page"]{background:#fff;color:#0f172a;box-shadow:var(--shadow)}
   </style>
 </head>
 <body>
@@ -46,16 +51,17 @@
       <div>
         <h1>Projects</h1>
         <p>Jordan Markland · Optical Systems & Sensors • Software • Research</p>
+        <nav class="subnav" aria-label="Site">
+          <a href="index.html#bio">Bio</a>
+          <a href="projects.html" aria-current="page">Projects</a>
+          <a href="index.html#education">Education</a>
+          <a href="index.html#experience">Extra‑curricular Experience</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
       </div>
     </div>
   </header>
-<nav>
-    <a href="index.html">Bio</a>
-    <a href="project.html">Project</a>
-    <a href="#education">Education</a>
-    <a href="#extra-curricular">Extra-curricular Experience</a>
-    <a href="#contact">Contact</a>
-</nav>
+
   <main class="container">
     <!-- Controls -->
     <div class="controls" role="toolbar" aria-label="Project filters and search">
@@ -236,4 +242,3 @@
   </script>
 </body>
 </html>
-
